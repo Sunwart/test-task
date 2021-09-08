@@ -1,0 +1,2 @@
+:root{--color-basic: #ffffff;--color-contrast: #000000;--color-brand: #3cb878;--color-brand-dark: #01813f;--color-text: #434343;--color-text-light: #bebebe;--font-main: "Ubuntu", sans-serif}body{font-family:var(--font-main)}img{display:block;max-width:100%;height:auto}ul{padding:0;margin:0;list-style:none}h1,h2,h3,h4,h5,h6,p{margin-top:0;margin-bottom:0}.container{width:100%;max-width:1364px;margin:0 auto;padding-left:79px;padding-right:79px}
+/*# sourceMappingURL=main.min.css.map */
