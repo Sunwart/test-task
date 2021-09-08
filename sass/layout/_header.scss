@@ -1,49 +1,3 @@
-:root {
-  --color-basic: #ffffff;
-  --color-contrast: #000000;
-  --color-brand: #3cb878;
-  --color-brand-dark: #01813f;
-  --color-text: #434343;
-  --color-text-light: #bebebe;
-  --font-main: "Ubuntu", sans-serif;
-}
-
-body {
-  font-family: var(--font-main);
-  color: var(--color-text);
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.container {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding-left: 60px;
-  padding-right: 60px;
-}
-
 .header {
   background-color: rgba(0, 0, 0, 0.4);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -60,27 +14,27 @@ p {
   position: relative;
   margin-left: auto;
   margin-right: 53px;
-}
 
-.menu::after {
-  content: ' ';
-  width: 19px;
-  height: 1px;
-  background-color: var(--color-basic);
-  transform: rotate(90deg);
-  position: absolute;
-  right: -26px;
+  &::after {
+    content: ' ';
+    width: 19px;
+    height: 1px;
+    background-color: var(--color-basic);
+    transform: rotate(90deg);
+    position: absolute;
+    right: -26px;
+  }
 }
 
 .menu__link {
   padding: 15px;
   color: var(--color-basic);
   transition: color 300ms linear;
-}
 
-.menu__link:hover,
-.menu__link :focus {
-  color: var(--color-brand);
+  &:hover,
+  :focus {
+    color: var(--color-brand);
+  }
 }
 
 .menu__icon {
@@ -96,11 +50,11 @@ p {
   padding: 18px 0;
   transition: color 300ms linear;
   text-decoration: none;
-}
 
-.logo:hover,
-.logo :focus {
-  color: var(--color-brand);
+  &:hover,
+  :focus {
+    color: var(--color-brand);
+  }
 }
 
 .header__text {
@@ -116,11 +70,11 @@ p {
   padding-bottom: 18px;
   color: var(--color-basic);
   transition: color 300ms linear;
-}
 
-.header__link:hover,
-.header__link :focus {
-  color: var(--color-brand);
+  &:hover,
+  :focus {
+    color: var(--color-brand);
+  }
 }
 
 .backdrop {
@@ -166,11 +120,11 @@ p {
   font-weight: 400;
   font-size: 20px;
   line-height: 1;
-}
 
-.close__link:hover,
-.close__link :focus {
-  color: var(--color-brand-dark);
+  &:hover,
+  :focus {
+    color: var(--color-brand-dark);
+  }
 }
 
 .modal__title {
@@ -178,17 +132,17 @@ p {
   font-weight: 400;
   font-size: 20px;
   line-height: 1;
-}
 
-.modal__title::before {
-  content: ' ';
-  display: block;
-  width: 18px;
-  height: 18px;
-  background-color: var(--color-brand);
-  position: absolute;
-  top: 31.5px;
-  left: 0;
+  &::before {
+    content: ' ';
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-color: var(--color-brand);
+    position: absolute;
+    top: 31.5px;
+    left: 0;
+  }
 }
 
 .modal__title--align {
@@ -203,16 +157,16 @@ p {
   border-radius: 4px;
   transition: border 300ms linear;
   margin-bottom: 15px;
-}
 
-.form-input::placeholder {
-  color: var(--color-text-light);
-}
+  &::placeholder {
+    color: var(--color-text-light);
+  }
 
-.form-input:focus {
-  border: none;
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.21);
-  outline: none;
+  &:focus {
+    border: none;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.21);
+    outline: none;
+  }
 }
 
 .btn {
@@ -223,11 +177,11 @@ p {
   color: var(--color-basic);
   background-color: var(--color-brand);
   transition: background-color 300ms linear;
-}
 
-.btn:hover,
-.btn :focus {
-  background-color: var(--color-brand-dark);
+  &:hover,
+  :focus {
+    background-color: var(--color-brand-dark);
+  }
 }
 
 .form__checkbox {
@@ -254,6 +208,7 @@ p {
   width: 16px;
   height: 15px;
   border: 1px solid #f2f2f2;
+
   margin-right: 8px;
 }
 
@@ -280,33 +235,9 @@ p {
   text-decoration: none;
   color: var(--color-brand);
   transition: color 300ms linear;
-}
 
-.form__checkbox-link:hover,
-.form__checkbox-link :focus {
-  color: var(--color-brand-dark);
-}
-
-.background-image {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
-  z-index: -1;
-  background-color: var(--color-text);
-  background-image: url("../images/bg.jpg");
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-size: contain;
-  height: 1536px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-@media screen and (max-width: 1365px) {
-  .background-image {
-    background-size: cover;
-    height: 770px;
+  &:hover,
+  :focus {
+    color: var(--color-brand-dark);
   }
 }
-/*# sourceMappingURL=main.css.map */

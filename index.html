@@ -21,36 +21,69 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <header>
-      <nav>
+    <header class="header">
+      <nav class="container site-nav">
         <a href="./img/" class="logo">Journey</a>
-        <ul>
+        <ul class="menu">
           <li>
-            <a href="#">
-              <svg>
-                <use></use>
+            <a href="#" class="menu__link">
+              <svg width="21" height="24" class="menu__icon">
+                <use href="./images/icons.svg#icon-calendar"></use>
               </svg>
             </a>
           </li>
           <li>
-            <a href="#">
-              <svg>
-                <use></use>
+            <a href="#" class="menu__link">
+              <svg width="23" height="23" class="menu__icon">
+                <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
             </a>
           </li>
           <li>
-            <a href="#">
-              <svg>
-                <use></use>
+            <a href="#" class="menu__link">
+              <svg width="23" height="24" class="menu__icon">
+                <use href="./images/icons.svg#icon-compass"></use>
               </svg>
             </a>
           </li>
         </ul>
+        <p class="header__text">
+          Welcome, <a href="#" class="header__link">Log In</a> or
+          <a href="#" class="header__link" data-modal-open>Sign Up</a>
+        </p>
       </nav>
-      <a href="#">Welcome, Log In</a>
-      <button type="button">or Sign Up</button>
+      <div data-modal class="backdrop is-hidden">
+        <div class="modal container">
+          <div class="modal__title--align">
+            <span class="modal__title">Sign UP</span>
+            <button type="button" class="close__link" data-modal-close>Х</button>
+          </div>
+          <form>
+            <input class="form-input" type="text" placeholder="First Name" />
+            <input class="form-input" type="text" placeholder="Last Name" />
+            <input class="form-input" type="email" placeholder="Email" required />
+            <input class="form-input" type="password" placeholder="Choose Password" required />
+            <input class="form-input" type="password" placeholder="Confirm Password" required />
+            <label class="form__checkbox">
+              <input
+                type="checkbox"
+                class="form__checkbox--hidden"
+                name="agreement"
+                value="agree"
+                required
+              /><span class="form__checkbox--custom">
+                <svg width="16" height="16" class="form__checkbox--checked-icon">
+                  <use href="./images/icons.svg#icon-checked"></use></svg></span
+              ><span
+                >Agree with our <a href="#" class="form__checkbox-link">Terms & Conditions</a></span
+              ></label
+            >
+            <button type="submit" class="btn">Create Account</button>
+          </form>
+        </div>
+      </div>
     </header>
-    <main></main>
+    <main class="background-image"></main>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
