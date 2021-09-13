@@ -59,11 +59,23 @@
             <button type="button" class="close__link" data-modal-close>Х</button>
           </div>
           <form>
-            <input class="form-input" type="text" placeholder="First Name" />
-            <input class="form-input" type="text" placeholder="Last Name" />
-            <input class="form-input" type="email" placeholder="Email" required />
-            <input class="form-input" type="password" placeholder="Choose Password" required />
-            <input class="form-input" type="password" placeholder="Confirm Password" required />
+            <input class="form-input" name="first-name" type="text" placeholder="First Name" />
+            <input class="form-input" name="last-name" type="text" placeholder="Last Name" />
+            <input class="form-input" name="e-mail" type="email" placeholder="Email" required />
+            <input
+              class="form-input"
+              name="password"
+              type="password"
+              placeholder="Choose Password"
+              required
+            />
+            <input
+              class="form-input"
+              name="password-repeat"
+              type="password"
+              placeholder="Confirm Password"
+              required
+            />
             <label class="form__checkbox">
               <input
                 type="checkbox"
@@ -85,5 +97,6 @@
     </header>
     <main class="background-image"></main>
     <script src="./js/modal.js"></script>
+    <script src="./js/test.js"></script>
   </body>
 </html>
