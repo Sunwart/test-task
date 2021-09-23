@@ -239,3 +239,145 @@
 // console.log(playlist['quantity']);
 // const property = 'tracks';
 // console.log(playlist[property]);
+
+// const inputName = 'color';
+// const inputValue = 'tomato';
+// const colorPickerData = {
+//   [inputName]: inputValue,
+// };
+// console.log(colorPickerData);
+
+// console.log([1, 2] === [1, 2]);
+// const a = { x: 10, y: 3 };
+// const b = a;
+// console.log(a === b);
+// a.x = 20;
+// b.y = 30;
+// console.log(a);
+// console.log(b);
+
+// const something = {
+//   array: [],
+//   transaction(amount, type) {
+//     this.array.push({ amount, type, id: this.array.length + 1 });
+//   },
+// };
+// something.transaction(50, 'add');
+// something.transaction(100, 'add');
+// console.log(something);
+
+// const numbers = [1, 2, 3].concat([4, 5, 6], [12, 13, 14]);
+// const numbers = [...[0, 5], 999, ...[1, 2, 3], ...[12, 21]];
+// console.log(numbers);
+
+// const temp = [32, 6, 23, 7, 1, 456, 44];
+// console.log(Math.max(...temp));
+// console.log(Math.max(temp));
+// const temp2 = [...temp];
+// console.log(temp === temp2);
+// temp2[1] = 666666;
+// console.log(temp);
+// console.log(temp2);
+
+// const t1 = [{ x: 1 }, { y: 2 }, { z: 3 }];
+// const t2 = [...t1];
+// t1[2].y = 111111;
+// console.log(t2[2].y);
+// console.log(t1 === t2);
+
+// const a = { x: 1, y: 2, z: 3 };
+// const b = { x: 1, y: 2, z: 4 };
+// const c = { x: 4, y: 3, z: 2 };
+// console.log({ ...a, ...b, ...c });
+// console.log({ ...b, ...c, ...a });
+// console.log({ ...c, ...a, ...b });
+
+// const a = { x: 1, y: 2, z: 3 };
+// const { z } = a;
+// console.log(z);
+
+// const a = [1, 2, 3, 4, 5, 6, 7, 8];
+// const b = a;
+// a[0] = 1000000000;
+// console.log(b[0]);
+// const [g, h, j, k, l, m, , o, p] = b;
+// console.log(g, h, j, k, l, m, o, p); // без 7
+
+// const profile = {
+//   name: 'Kuzya',
+//   city: 'Kwinslend',
+//   profesion: 'klerk',
+//   age: '88',
+//   stats: { a: 1, b: 2, c: 3 },
+// };
+// const { name, age, ...other } = profile;
+// console.log(name, age, other);
+
+// const sum = [
+//   [0, 1],
+//   [2, 3],
+//   [4, 5],
+// ];
+// console.log(sum[1][1]);
+
+// function greet(name) {
+//   console.log(`Добро пожаловать ${name}.`);
+// }
+// function registerGuest(name, callback) {
+//   console.log(`Регистрируем гостя ${name}.`);
+//   callback(name);
+// }
+// registerGuest('Манго', greet);
+
+// registerGuest('Поли', function notify(name) {
+//   console.log(`Уважаемый(ая) ${name}, ваш номер будет готов через 30 минут.`);
+// });
+
+// function processCall(recipient) {
+//   // Имитируем доступность абонента случайным числом
+//   const isRecipientAvailable = Math.random() > 0.5;
+//   if (!isRecipientAvailable) {
+//     console.log(`Абонент ${recipient} недоступен, оставьте сообщение.`);
+//   } else {
+//     console.log(`Соединяем с ${recipient}, ожидайте...`);
+//   }
+// }
+// processCall('Манго');
+
+// function processCall(recipient, onAvailable, onNotAvailable) {
+//   const isRecipientAvailable = Math.random() > 0.5;
+//   if (!isRecipientAvailable) {
+//     onNotAvailable(recipient);
+//     return;
+//   }
+//   onAvailable(recipient);
+// }
+
+// function takeCall(name) {
+//   console.log(`Соединяем с ${name}, ожидайте...`);
+// }
+
+// function activateAnsweringMachine(name) {
+//   console.log(`Абонент ${name} недоступен, оставьте сообщение.`);
+// }
+
+// function leaveHoloMessage(name) {
+//   console.log(`Абонент ${name} недоступен, записываем голограмму.`);
+// }
+
+// processCall('Манго', takeCall, activateAnsweringMachine);
+// processCall('Поли', takeCall, leaveHoloMessage);
+
+// function printValue(value) {
+//   console.log(value);
+// }
+// function prettyPrint(value) {
+//   console.log('Login value: ', value);
+// }
+// function repeat(n, action) {
+//   for (let i = 0; i < n; i += 1) {
+//     action(i);
+//   }
+// }
+// repeat(5, printValue);
+// repeat(5, prettyPrint);
