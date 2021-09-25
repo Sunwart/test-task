@@ -1,31 +1,24 @@
 ## Задание
 
-Сверстать макет [Sign up form](https://www.figma.com/file/3PNPbpcJmlUFv4exvGliij/Untitled?node-id=0%3A1). По ссылке находятся 2 макета. Первый - основной макет для верстки. Также дан второй макет под названием `Sign up form hovers`, на котором показано, как должны выглядеть разные элементы при наведении на них курсора мыши.  
+Сверстать страницу с анимацией, как на картинке [gif](animation_front-end_wars.gif). 
 
 #### Технические требования к верстке
 
-- Фоновая картинка должна быть растянута на весь экран независимо от размера экрана, с соблюдением всех пропорций
-- Верхняя полоса с иконками должна иметь прозрачность, как на макете
-- Все иконки в хедере должны быть сделаны с использованием svg
-- Форма логина должна находиться по центру страницы горизонтально и вертикально, независимо от размера экрана (вертикально - за вычетом высоты хедера)
-- Добавить зеленый квадрат слева от текста `Sign Up` вверху модального окна
-- Кнопки логина через гугл и фейсбук должны быть сверстаны вручную, не картинкой
-- Поля для ввода текста должны выделяться так как первое поле на макете при клике на них курсором мыши (не по ховеру), пока пользователь вводит текст в это поле
-- Чекбокс должен отмечаться также при клике на текст рядом с ним
-- В проект должен быть подключен шрифт, который указан в макете
+- Анимация должна длиться 30 секунд, потом начинаться сначала
 
-#### Необязательное задание продвинутой сложности
+#### Текст (можно использовать свой вариант):
 
-- Добавить transition для ховера
-- Стилизовать чекбокс как на макете
+##### EPISODE 0
+##### ATTACK OF THE FRONTEND
+
+When there is no more hope. When Winter is coming. When the White Walkers prepare to break down the Wall and JAVA can no longer stop them ... <br><br>
+Comes he - Javascript. Lord of untyped data and components, he does not give up technical tasks "to do nicely" and is not afraid of calculations on the user side. But he comes not alone, having 3 of his faithful friends with him: jQuery, React.js and Node.js.
+
+#### Необязательное задание
+
+- Добавить на страницу аудио тег с треком-заставкой из [Star Wars](https://www.youtube.com/watch?v=EjMNNpIksaI) :)
 
 #### Примечание
 - Верстка должна быть выполнена без использования CSS библиотек типа Bootstrap или Materialize.
+- Не пытайтесь сделать autoplay. Подобные попытки будут пресечены большинством браузеров.
 
-#### Полезные ссылки
-
-[Формы](https://dan-it.gitlab.io/fe-book/programming_essentials/html_css/lesson9_forms_sprites/forms.html)
-
-[Transition](https://dan-it.gitlab.io/fe-book/programming_essentials/html_css/lesson13_animation_parallax/transition.html)
-
-[Стилизация флажков и переключателей с использованием CSS3](https://habr.com/ru/post/489476/)

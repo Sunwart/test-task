@@ -381,3 +381,156 @@
 // }
 // repeat(5, printValue);
 // repeat(5, prettyPrint);
+
+// const numbers = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
+// numbers.forEach(function (element, index, array) {
+//   console.log(`The index is: ${index}, the valule is: ${element}`);
+//   let a = 0;
+//   a = element + array[index] + index;
+//   console.log(a);
+// });
+
+// const a = (x, y, z) => x + y + z;
+// console.log(a(1, 2, 3));
+// const greet = () => {
+//   console.log('Привет!');
+// };
+// greet();
+
+// const numbers = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
+// numbers.forEach((number, index) => {
+//   console.log(index, '+', number);
+// });
+// const msg = (number, index) => {
+//   console.log(`${number}'s index is ${index}`);
+// };
+// numbers.forEach(msg);
+
+// const numbers = [1, 2, 3, 4, 5];
+// const filteredNumbers = numbers.filter(value => value > 1 && value < 4);
+// console.log(filteredNumbers);
+
+// const array = [10, 20, 30, 40, 50, 60, 70, 80, 90];
+// const newArray = array.map(arrEl => arrEl / 10);
+// console.log(newArray);
+// console.log(array);
+
+// const obj = [
+//   { a: 1, b: [1, 2] },
+//   { a: 2, b: [3, 4] },
+//   { a: 3, b: [5, 6] },
+// ];
+// const objA = obj.map(objEl => objEl.a);
+// const objB = obj.flatMap(objEl => objEl.b);
+// console.log(objA);
+// console.log(objB);
+
+// const values = [2, 4, -6, 0, 14, -23, 35, 2, 3, -78, -55, -6, 35, 2, 4, 17];
+// const positiveValues = values.filter(value => value > 0);
+// console.log(positiveValues);
+// const uniqueValues = values.filter((value, index, array) => array.indexOf(value) === index);
+// console.log(uniqueValues);
+
+// const LOW_SCORE = 50;
+// const HIGH_SCORE = 80;
+// const students = [
+//   { name: 'Манго', score: 83 },
+//   { name: 'Поли', score: 59 },
+//   { name: 'Аякс', score: 37 },
+//   { name: 'Киви', score: 94 },
+//   { name: 'Хьюстон', score: 64 },
+// ];
+// const best = students.filter(student => student.score >= HIGH_SCORE);
+// console.log(best);
+// const worst = students.filter(student => student.score < LOW_SCORE);
+// console.log(worst);
+// const average = students.filter(({ score }) => score >= LOW_SCORE && score < HIGH_SCORE);
+// console.log(average);
+// const bestOne = students.find(student => student.score > 90);
+// console.log(bestOne);
+// const totalScore = students.reduce((total, student) => {
+//   return total + student.score;
+// }, 0);
+// console.log(totalScore);
+
+// const tweets = [
+//   { id: '000', likes: 50, tags: ['js', 'nodejs'] },
+//   { id: '001', likes: 20, tags: ['html', 'css'] },
+//   { id: '002', likes: 10, tags: ['html', 'js', 'nodejs'] },
+//   { id: '003', likes: 80, tags: ['css', 'react'] },
+//   { id: '004', likes: 40, tags: ['js', 'nodejs', 'react'] },
+// ];
+
+// const likes = tweets.reduce((totalLikes, tweet) => totalLikes + tweet.likes, 0);
+// console.log(likes);
+
+// const countLikes = tweets => {
+//   return tweets.reduce((totalLikes, tweet) => totalLikes + tweet.likes, 0);
+// };
+// console.log(countLikes(tweets));
+
+// const tags = tweets.reduce((allTags, tweet) => {
+//   allTags.push(...tweet.tags);
+//   return allTags;
+// }, []);
+// console.log(tags);
+
+// const getTags = tweets =>
+//   tweets.reduce((allTags, tweet) => {
+//     allTags.push(...tweet.tags);
+//     return allTags;
+//   }, []);
+// const tags = getTags(tweets);
+// console.log(tags);
+
+// const getTagStats = (acc, tag) => {
+//   if (!acc.hasOwnProperty(tag)) {
+//     acc[tag] = 0;
+//   }
+//   acc[tag] += 1;
+//   return acc;
+// };
+// const countTags = tags => tags.reduce(getTagStats, {});
+
+// const tagCount = countTags(tags);
+// console.log(tagCount);
+
+// const scores = [61, 19, 74, 35, 92, 56];
+// const ascendingScores = [...scores].sort();
+// console.log(scores);
+// console.log(ascendingScores);
+
+// const students = [
+//   { name: 'Манго', score: 83 },
+//   { name: 'Поли', score: 59 },
+//   { name: 'Аякс', score: 37 },
+//   { name: 'Киви', score: 94 },
+// ];
+
+// const inAscendingScoreOrder = students.sort(
+//   (firstStudent, secondStudent) => firstStudent.score - secondStudent.score,
+// );
+
+// const inDescendingScoreOrder = students.sort(
+//   (firstStudent, secondStudent) => secondStudent.score - firstStudent.score,
+// );
+
+// const inAlphabeticalOrder = students.sort((firstStudent, secondStudent) =>
+//   firstStudent.name.localeCompare(secondStudent.name),
+// );
+
+// function foo(i) {
+//   if (i < 0) return;
+//   console.log('begin: ' + i);
+//   foo(i - 1);
+//   console.log('end: ' + i);
+// }
+// a = foo(3);
+
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+//   orderedItems.forEach(function (number) {
+//     totalPrice += number;
+//   });
+//   return totalPrice;
+// }
