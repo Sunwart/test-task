@@ -535,78 +535,78 @@
 //   return totalPrice;
 // }
 
-const a = [
-  {
-    name: 'Moore Hensley',
-    email: 'moorehensley@indexia.com',
-    eyeColor: 'blue',
-    friends: ['Sharron Pace'],
-    isActive: false,
-    balance: 2811,
-    gender: 'male',
-    age: 37,
-  },
-  {
-    name: 'Sharlene Bush',
-    email: 'sharlenebush@tubesys.com',
-    eyeColor: 'blue',
-    friends: ['Briana Decker', 'Sharron Pace'],
-    isActive: true,
-    balance: 3821,
-    gender: 'female',
-    age: 34,
-  },
-  {
-    name: 'Ross Vazquez',
-    email: 'rossvazquez@xinware.com',
-    eyeColor: 'green',
-    friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
-    isActive: false,
-    balance: 3793,
-    gender: 'male',
-    age: 24,
-  },
-  {
-    name: 'Elma Head',
-    email: 'elmahead@omatom.com',
-    eyeColor: 'green',
-    friends: ['Goldie Gentry', 'Aisha Tran'],
-    isActive: true,
-    balance: 2278,
-    gender: 'female',
-    age: 21,
-  },
-  {
-    name: 'Carey Barr',
-    email: 'careybarr@nurali.com',
-    eyeColor: 'blue',
-    friends: ['Jordan Sampson', 'Eddie Strong'],
-    isActive: true,
-    balance: 3951,
-    gender: 'male',
-    age: 27,
-  },
-  {
-    name: 'Blackburn Dotson',
-    email: 'blackburndotson@furnigeer.com',
-    eyeColor: 'brown',
-    friends: ['Jacklyn Lucas', 'Linda Chapman'],
-    isActive: false,
-    balance: 1498,
-    gender: 'male',
-    age: 38,
-  },
-  {
-    name: 'Sheree Anthony',
-    email: 'shereeanthony@kog.com',
-    eyeColor: 'brown',
-    friends: ['Goldie Gentry', 'Briana Decker'],
-    isActive: true,
-    balance: 2764,
-    gender: 'female',
-    age: 39,
-  },
-];
+// const a = [
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sharron Pace'],
+//     isActive: false,
+//     balance: 2811,
+//     gender: 'male',
+//     age: 37,
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Briana Decker', 'Sharron Pace'],
+//     isActive: true,
+//     balance: 3821,
+//     gender: 'female',
+//     age: 34,
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//     isActive: false,
+//     balance: 3793,
+//     gender: 'male',
+//     age: 24,
+//   },
+//   {
+//     name: 'Elma Head',
+//     email: 'elmahead@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Goldie Gentry', 'Aisha Tran'],
+//     isActive: true,
+//     balance: 2278,
+//     gender: 'female',
+//     age: 21,
+//   },
+//   {
+//     name: 'Carey Barr',
+//     email: 'careybarr@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Jordan Sampson', 'Eddie Strong'],
+//     isActive: true,
+//     balance: 3951,
+//     gender: 'male',
+//     age: 27,
+//   },
+//   {
+//     name: 'Blackburn Dotson',
+//     email: 'blackburndotson@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//     isActive: false,
+//     balance: 1498,
+//     gender: 'male',
+//     age: 38,
+//   },
+//   {
+//     name: 'Sheree Anthony',
+//     email: 'shereeanthony@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//     isActive: true,
+//     balance: 2764,
+//     gender: 'female',
+//     age: 39,
+//   },
+// ];
 
 // const getUsersWithFriend = (users, friendName) => {
 //   return users.filter(user => user.friends.includes(friendName));
@@ -725,11 +725,70 @@ const a = [
 // };
 // console.log(getTotalBalanceByGender(a, 'female'));
 
-function createProduct(obj, callback) {
-  const newObj = { ...obj, id: Date.now() };
-  callback(newObj);
-}
-function logProduct(product) {
-  console.log(product);
-}
-createProduct({ a: 'qweqw', b: 234, c: true }, logProduct);
+// function createProduct(obj, callback) {
+//   const newObj = { ...obj, id: Date.now() };
+//   callback(newObj);
+// }
+// function logProduct(product) {
+//   console.log(product);
+//   console.log(this);
+// }
+// createProduct({ a: 'qweqw', b: 234, c: true }, logProduct);
+
+//  ---------------- !!! -------------  Lodash  ----- !!! ------
+
+console.log(_);
+console.dir(_);
+const a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const b = [];
+console.log(_.isEmpty(a));
+console.log(_.isEmpty(b));
+console.log(_.isEmpty({ a: 1, b: 2 }));
+console.log(_.isEmpty({}));
+
+const user = {
+  name: 'Galya',
+  location: {
+    city: 'Budva',
+    country: 'Montenegro',
+    coordinates: [1, 2],
+  },
+};
+console.log(_.get(user, 'location.city'));
+console.log(user?.location?.country);
+console.log('not existing property', user?.location?.street);
+
+console.log(_.union([1, 2, 3, 4, 5, 6], [21, 3, 45, 6, 333]));
+console.log(_.range(1, 10));
+console.log(_.range(-21, -13));
+console.log(_.range(-20, 20, 5));
+
+const players = [
+  { name: 'Alex', age: 21, score: 10 },
+  { name: 'Bob', age: 32, score: 20 },
+  { name: 'Anton', age: 18, score: 10 },
+  { name: 'Albert', age: 42, score: 10 },
+  { name: 'Stephan', age: 12, score: 30 },
+  { name: 'Alex', age: 16, score: 10 },
+  { name: 'Bob', age: 39, score: 10 },
+  { name: 'Bob', age: 13, score: 50 },
+];
+console.log(_.sortBy(players, player => player.age));
+console.log(_.sortBy(players, ['name', 'age']));
+console.log(_.sumBy(players, player => player.score));
+console.log(_.uniq([21, 3, 45, 6, 7, 21, 88, 6, 123, 144]));
+console.log(_.min([22, 4, 56, -3, 234, 1]));
+console.log(_.minBy(players, player => player.age));
+console.log(_.maxBy(players, player => player.score));
+
+console.log(_.camelCase('--- fd GfgsFFFF-sdfs-'));
+console.log(_.camelCase('dsdfs kkjljlkj ahvsgvh'));
+console.log(_.camelCase('ddd+fff+rer+h'));
+
+console.log(_.kebabCase(' s d f g kjlkjl'));
+
+console.log(_.capitalize('ada kjjkhio Gadsfjoi'));
+console.log(_.lowerCase('ada kjjkhio Gadsfjoi'));
+console.log(_.upperCase('ada kjjkhio Gadsfjoi'));
+
+//  ---------------- !!! -------------  Lodash practice finished ----- !!! ------
