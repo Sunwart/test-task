@@ -711,18 +711,25 @@ const a = [
 //   .map(book => book.author);
 // console.log(names);
 
-const getNamesSortedByFriendCount = users => {
-  return [...users].sort((u1, u2) => u1.friends.length - u2.friends.length).map(user => user.name);
-};
-console.log(getNamesSortedByFriendCount(a));
+// const getNamesSortedByFriendCount = users => {
+//   return [...users].sort((u1, u2) => u1.friends.length - u2.friends.length).map(user => user.name);
+// };
+// console.log(getNamesSortedByFriendCount(a));
+// const getTotalBalanceByGender = (users, gender) => {
+//   return [...users]
+//     .filter(user => user.gender === gender)
+//     .map(user => user.balance)
+//     .reduce((total, nums) => {
+//       return (total += nums);
+//     }, 0);
+// };
+// console.log(getTotalBalanceByGender(a, 'female'));
 
-const getTotalBalanceByGender = (users, gender) => {
-  return [...users]
-    .filter(user => user.gender === gender)
-    .map(user => user.balance)
-    .reduce((total, nums) => {
-      return (total += nums);
-    }, 0);
-};
-
-console.log(getTotalBalanceByGender(a, 'female'));
+function createProduct(obj, callback) {
+  const newObj = { ...obj, id: Date.now() };
+  callback(newObj);
+}
+function logProduct(product) {
+  console.log(product);
+}
+createProduct({ a: 'qweqw', b: 234, c: true }, logProduct);
