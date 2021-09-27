@@ -326,7 +326,7 @@ p {
   font-weight: 700;
   line-height: 2;
   padding: 30px;
-  flex-basis: 30%;
+  flex-basis: 200px;
 }
 
 .js-decrement,
