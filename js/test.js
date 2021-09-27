@@ -956,29 +956,149 @@
 // console.log(hat);
 // console.log(dress);
 
-// -------------- COUNTER -----------------------------
+// const animal = { legs: 4 };
+// const dog = Object.create(animal);
+// console.log(dog);
+// console.log(dog.legs);
+// dog.name = 'Teddy';
+// console.log(dog);
+// console.log(animal.isPrototypeOf(dog));
+// console.log(dog.hasOwnProperty('name'));
+// console.log(dog.hasOwnProperty('legs'));
+// console.log(dog.hasOwnProperty('someProperty'));
 
-const counter = {
-  value: 0,
-  increment() {
-    console.log('Increment this: ', this);
-    this.value += 1;
-  },
-  decrement() {
-    console.log('Decrement this: , this');
-    this.value -= 1;
-  },
-};
+// class User {
+//   constructor(name, email) {
+//     this.name = name;
+//     this.email = email;
+//   }
+// }
+// const galya = new User('Galya', 'li.sa.vectorart@gmail.com');
+// console.log(galya);
+// console.log(galya.hasOwnProperty('name'));
 
-const decrementBtn = document.querySelector('.js-decrement');
-const incrementBtn = document.querySelector('.js-increment');
-const valueEl = document.querySelector('.js-value');
+// class UserFromObj {
+//   name;
+//   #email;
+//   constructor({ name, email }) {
+//     this.name = name;
+//     this.#email = email;
+//   }
+//   getEmail() {
+//     ret
 
-decrementBtn.addEventListener('click', function () {
-  counter.decrement();
-  valueEl.textContent = counter.value;
-});
-incrementBtn.addEventListener('click', function () {
-  counter.increment();
-  valueEl.textContent = counter.value;
-});
+//   changeEmail(newEmail) {
+//     return (this.#email = newEmail);
+//   }
+// }
+// const someone = new UserFromObj({ name: 'Slavik', email: 'slavik.a@gmail.com' });
+// console.log(someone.getEmail());
+// someone.getEmail();
+// someone.changeEmail('slavik.a@ukr.net');
+// console.log(someone.getEmail());
+
+// class User {
+//   static Roles = {
+//     ADMIN: 'admin',
+//     EDITOR: 'editor',
+//   };
+//   static #takenEmails = [];
+//   static isEmailTaken(email) {
+//     return User.#takenEmails.includes(email);
+//   }
+
+//   #role;
+//   #email;
+//   constructor({ name, email, role }) {
+//     this.name = name;
+//     this.#email = email;
+//     this.#role = role;
+//     User.#takenEmails.push(email);
+//   }
+//   get email() {
+//     return this.#email;
+//   }
+//   set email(newEmail) {
+//     if (newEmail === '') {
+//       console.error('Ошибка! Почта не может быть пустой строкой!');
+//       return;
+//     }
+//     this.#email = newEmail;
+//   }
+//   get role() {
+//     return this.#role;
+//   }
+
+//   set role(newRole) {
+//     this.#role = newRole;
+//   }
+// }
+// const mango = new User({ name: 'Манго', email: 'mango@mail.com', role: User.Roles.ADMIN });
+// console.log(mango.email);
+// mango.email = '';
+// console.log(mango.email);
+// console.log(mango.Roles);
+// console.log(User.Roles);
+// console.log(mango.role);
+// mango.role = User.Roles.EDITOR;
+// console.log(mango.role);
+// console.log(User.isEmailTaken('poly@mail.com'));
+// console.log(User.isEmailTaken('mango@mail.com'));
+// mango.email = 'mango2@mail.com';
+// console.log(User.isEmailTaken('mango@mail.com')); //set email should be changed to remove old one and add new to #takenEmails
+
+// class User {
+//   constructor(email) {
+//     this.email = email;
+//   }
+
+//   get theEmail() {
+//     return this.email;
+//   }
+
+//   set theEmail(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+
+// class ContentEditor extends User {
+//   // Тело класса ContentEditor
+// }
+
+// const editor = new ContentEditor('mango@mail.com');
+// console.log(editor.email);
+// editor.theEmail = 'some@email.com';
+// console.log(editor.theEmail);
+// console.log(editor.email);
+
+// class User {
+//   constructor(mail) {
+//     this.mail = mail;
+//   }
+
+//   get eMail() {
+//     return this.mail;
+//   }
+
+//   set eMail(newEmail) {
+//     this.mail = newEmail;
+//   }
+// }
+
+// class ContentEditor extends User {
+//   constructor({ mail, posts }) {
+//     super(mail);
+//     this.posts = posts;
+//   }
+//   addPost(post) {
+//     this.posts.push(post);
+//   }
+// }
+
+// const editor = new ContentEditor({ mail: 'mango@mail.com', posts: [] });
+// editor.mail = 'adasd';
+// editor.eMail = 'asdasda';
+// console.log(editor.mail);
+// console.log(editor.eMail);
+// editor.addPost('post-1');
+// console.log(editor);

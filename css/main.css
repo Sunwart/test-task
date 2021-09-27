@@ -312,7 +312,7 @@ p {
 
 .section-bg {
   background-color: white;
-  width: 500px;
+  width: 400px;
   padding: 50px;
   display: flex;
   margin: 100px auto;
@@ -325,13 +325,12 @@ p {
   font-size: 54px;
   font-weight: 700;
   line-height: 2;
-  padding: 30px;
-  flex-basis: 200px;
+  flex-basis: 100px;
 }
 
 .js-decrement,
 .js-increment {
   align-self: center;
-  flex-basis: 30%;
+  flex-basis: 125px;
 }
 /*# sourceMappingURL=main.css.map */
