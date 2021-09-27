@@ -737,59 +737,59 @@
 
 //  ---------------- !!! -------------  Lodash  ----- !!! ------
 
-console.log(_);
-console.dir(_);
-const a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-const b = [];
-console.log(_.isEmpty(a));
-console.log(_.isEmpty(b));
-console.log(_.isEmpty({ a: 1, b: 2 }));
-console.log(_.isEmpty({}));
+// console.log(_);
+// console.dir(_);
+// const a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const b = [];
+// console.log(_.isEmpty(a));
+// console.log(_.isEmpty(b));
+// console.log(_.isEmpty({ a: 1, b: 2 }));
+// console.log(_.isEmpty({}));
 
-const user = {
-  name: 'Galya',
-  location: {
-    city: 'Budva',
-    country: 'Montenegro',
-    coordinates: [1, 2],
-  },
-};
-console.log(_.get(user, 'location.city'));
-console.log(user?.location?.country);
-console.log('not existing property', user?.location?.street);
+// const user = {
+//   name: 'Galya',
+//   location: {
+//     city: 'Budva',
+//     country: 'Montenegro',
+//     coordinates: [1, 2],
+//   },
+// };
+// console.log(_.get(user, 'location.city'));
+// console.log(user?.location?.country);
+// console.log('not existing property', user?.location?.street);
 
-console.log(_.union([1, 2, 3, 4, 5, 6], [21, 3, 45, 6, 333]));
-console.log(_.range(1, 10));
-console.log(_.range(-21, -13));
-console.log(_.range(-20, 20, 5));
+// console.log(_.union([1, 2, 3, 4, 5, 6], [21, 3, 45, 6, 333]));
+// console.log(_.range(1, 10));
+// console.log(_.range(-21, -13));
+// console.log(_.range(-20, 20, 5));
 
-const players = [
-  { name: 'Alex', age: 21, score: 10 },
-  { name: 'Bob', age: 32, score: 20 },
-  { name: 'Anton', age: 18, score: 10 },
-  { name: 'Albert', age: 42, score: 10 },
-  { name: 'Stephan', age: 12, score: 30 },
-  { name: 'Alex', age: 16, score: 10 },
-  { name: 'Bob', age: 39, score: 10 },
-  { name: 'Bob', age: 13, score: 50 },
-];
-console.log(_.sortBy(players, player => player.age));
-console.log(_.sortBy(players, ['name', 'age']));
-console.log(_.sumBy(players, player => player.score));
-console.log(_.uniq([21, 3, 45, 6, 7, 21, 88, 6, 123, 144]));
-console.log(_.min([22, 4, 56, -3, 234, 1]));
-console.log(_.minBy(players, player => player.age));
-console.log(_.maxBy(players, player => player.score));
+// const players = [
+//   { name: 'Alex', age: 21, score: 10 },
+//   { name: 'Bob', age: 32, score: 20 },
+//   { name: 'Anton', age: 18, score: 10 },
+//   { name: 'Albert', age: 42, score: 10 },
+//   { name: 'Stephan', age: 12, score: 30 },
+//   { name: 'Alex', age: 16, score: 10 },
+//   { name: 'Bob', age: 39, score: 10 },
+//   { name: 'Bob', age: 13, score: 50 },
+// ];
+// console.log(_.sortBy(players, player => player.age));
+// console.log(_.sortBy(players, ['name', 'age']));
+// console.log(_.sumBy(players, player => player.score));
+// console.log(_.uniq([21, 3, 45, 6, 7, 21, 88, 6, 123, 144]));
+// console.log(_.min([22, 4, 56, -3, 234, 1]));
+// console.log(_.minBy(players, player => player.age));
+// console.log(_.maxBy(players, player => player.score));
 
-console.log(_.camelCase('--- fd GfgsFFFF-sdfs-'));
-console.log(_.camelCase('dsdfs kkjljlkj ahvsgvh'));
-console.log(_.camelCase('ddd+fff+rer+h'));
+// console.log(_.camelCase('--- fd GfgsFFFF-sdfs-'));
+// console.log(_.camelCase('dsdfs kkjljlkj ahvsgvh'));
+// console.log(_.camelCase('ddd+fff+rer+h'));
 
-console.log(_.kebabCase(' s d f g kjlkjl'));
+// console.log(_.kebabCase(' s d f g kjlkjl'));
 
-console.log(_.capitalize('ada kjjkhio Gadsfjoi'));
-console.log(_.lowerCase('ada kjjkhio Gadsfjoi'));
-console.log(_.upperCase('ada kjjkhio Gadsfjoi'));
+// console.log(_.capitalize('ada kjjkhio Gadsfjoi'));
+// console.log(_.lowerCase('ada kjjkhio Gadsfjoi'));
+// console.log(_.upperCase('ada kjjkhio Gadsfjoi'));
 
 //  ---------------- !!! -------------  Lodash practice finished ----- !!! ------
 
@@ -895,3 +895,90 @@ console.log(_.upperCase('ada kjjkhio Gadsfjoi'));
 //   console.log(`Обрабатываем заявку от ${callback()}.`);
 // }
 // makeMessage(customer.getFullName.bind(customer));
+
+// const makeChangeColor = function () {
+//   const changeColor = function (color) {
+//     console.log('changeColor -> ', this);
+//     this.color = color;
+//   };
+
+//   return changeColor;
+// };
+// const updateColor = makeChangeColor();
+// const sweater = {
+//   color: 'teal',
+//   size: 'M',
+//   material: 'coton',
+//   available: true,
+//   gendeg: 'unisex',
+// };
+// sweater.updateColor = updateColor;
+// console.log(sweater);
+// sweater.updateColor('orange');
+// console.log(sweater);
+
+// const showThis = function (x, y, z) {
+//   console.log('Show this -> ', this);
+//   console.log(x);
+//   console.log(y);
+//   console.log(z);
+// };
+// console.log(showThis);
+// console.dir(showThis);
+// showThis();
+// const obj = { a: 100, b: 500 };
+// showThis.call(obj, 10, 20, 30);
+// console.log(obj);
+
+// const showThis = function (x, y, z) {
+//   console.log('Show this -> ', this);
+//   console.log(x, y, z);
+// };
+// const obj = { a: 100, b: 500 };
+// const qwe = [10, 20, 30];
+// showThis.apply(obj, qwe);
+
+// ------------------ !!! -------------- CALL, APPLY, BIND -------------------------
+// const changeColor = function (color) {
+//   this.color = color;
+// };
+// const hat = { name: 'hat', color: 'green' };
+// const dress = { name: 'dress', color: 'red' };
+// changeColor.call(hat, 'pink');
+// changeColor.apply(dress, ['coral']);
+// console.log(hat);
+// console.log(dress);
+
+// const changeHatColor = changeColor.bind(hat);
+// const changeDressColor = changeColor.bind(dress);
+// changeHatColor('light green');
+// changeDressColor('dark green');
+// console.log(hat);
+// console.log(dress);
+
+// -------------- COUNTER -----------------------------
+
+const counter = {
+  value: 0,
+  increment() {
+    console.log('Increment this: ', this);
+    this.value += 1;
+  },
+  decrement() {
+    console.log('Decrement this: , this');
+    this.value -= 1;
+  },
+};
+
+const decrementBtn = document.querySelector('.js-decrement');
+const incrementBtn = document.querySelector('.js-increment');
+const valueEl = document.querySelector('.js-value');
+
+decrementBtn.addEventListener('click', function () {
+  counter.decrement();
+  valueEl.textContent = counter.value;
+});
+incrementBtn.addEventListener('click', function () {
+  counter.increment();
+  valueEl.textContent = counter.value;
+});
