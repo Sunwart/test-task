@@ -792,3 +792,106 @@ console.log(_.lowerCase('ada kjjkhio Gadsfjoi'));
 console.log(_.upperCase('ada kjjkhio Gadsfjoi'));
 
 //  ---------------- !!! -------------  Lodash practice finished ----- !!! ------
+
+// function foo() {
+//   console.log(this);
+// }
+// foo();
+
+// const petya = {
+//   username: 'Petya',
+//   showThis() {
+//     console.log(this);
+//   },
+//   showName() {
+//     console.log(this.username);
+//   },
+// };
+// petya.showThis();
+// petya.showName();
+
+// function showThis() {
+//   console.log('this in showThis: ', this);
+// }
+// showThis();
+
+// const someone = {
+//   username: 'Mango',
+// };
+// someone.showContext = showThis;
+// someone.showContext();
+// console.log(someone);
+
+// const showThisArrow = () => {
+//   console.log('this in showThis: ', this);
+// };
+// showThisArrow();
+// someone.showContextArrow = showThisArrow;
+// someone.showContextArrow();
+
+// const hotel = {
+//   username: 'Resort hotel',
+//   objectThis() {
+//     console.log('this in objectThis: ', this);
+//   },
+//   showThis() {
+//     const foo = () => {
+//       console.log('this in foo: ', this);
+//     };
+
+//     foo();
+//   },
+// };
+// hotel.objectThis();
+// hotel.showThis('asd');
+
+// function greetGuest(greeting) {
+//   console.log(`${greeting}, ${this.username}.`);
+// }
+// const mango = {
+//   username: 'Манго',
+// };
+// const poly = {
+//   username: 'Поли',
+// };
+// greetGuest.call(mango, 'Добро пожаловать');
+// greetGuest.call(poly, 'С приездом');
+
+// function greetGuest(greeting) {
+//   console.log(`${greeting}, ${this.username}.`);
+//   console.log(greeting[0]);
+// }
+// const mango = {
+//   username: 'Манго',
+// };
+// const poly = {
+//   username: 'Поли',
+// };
+// greetGuest.apply(mango, [1, 2]);
+// greetGuest.apply(poly, ['С приездом']);
+
+// function greetT(clientName) {
+//   return `${clientName}, добро пожаловать в «${this.service}».`;
+// }
+// const steam = {
+//   service: 'Steam',
+// };
+// const steamGreeter = greetT.bind(steam);
+// console.log(steamGreeter('Манго'));
+// const gmail = {
+//   service: 'Gmail',
+// };
+// const gmailGreeter = greetT.bind(gmail);
+// console.log(gmailGreeter('Поли'));
+
+// const customer = {
+//   firstName: 'Jacob',
+//   lastName: 'Mercer',
+//   getFullName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   },
+// };
+// function makeMessage(callback) {
+//   console.log(`Обрабатываем заявку от ${callback()}.`);
+// }
+// makeMessage(customer.getFullName.bind(customer));
