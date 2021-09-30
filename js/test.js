@@ -1102,3 +1102,27 @@
 // console.log(editor.eMail);
 // editor.addPost('post-1');
 // console.log(editor);
+
+// const objA = {
+//   x: 15,
+// };
+// const objB = Object.create(objA);
+// objB.y = 30;
+// const objC = Object.create(objB);
+// objC.z = 100;
+// objC.x = 500;
+// objB.y = 200;
+// console.table('ObjA', objA);
+// console.table('ObjB', objB);
+// console.table('ObjC', objC);
+// console.log(objB.y);
+// console.log(objA.x);
+// console.log(objB.x);
+// console.log(objC.x);
+
+// const Car = function (value) {
+//   console.log(this);
+//   this.a = value;
+// };
+// const myCar = new Car(5);
+// console.log(myCar);
