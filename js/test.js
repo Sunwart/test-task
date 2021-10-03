@@ -1126,3 +1126,28 @@
 // };
 // const myCar = new Car(5);
 // console.log(myCar);
+
+// class Blogger {
+//   constructor({ email = ' ', age = 0, numberOfPosts = 0, topics = [] }) {
+//     this.email = email;
+//     this.age = age;
+//     this.numberOfPosts = numberOfPosts;
+//     this.topics = topics;
+//   }
+
+//   getInfo() {
+//     return `Blogger ${this.email}`;
+//   }
+// }
+
+// const kuzya = new Blogger({
+//   email: 'Kuzya',
+//   age: 13,
+//   numberOfPosts: 21,
+//   topics: ['t1', 't2', 't3', 't4'],
+// });
+// console.log(kuzya.getInfo);
+
+// console.log(kuzya);
+// const nafanya = new Blogger({});
+// console.log(nafanya);
