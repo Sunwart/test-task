@@ -1169,22 +1169,20 @@
 // const listItems = list.children;
 // console.log(listItems);
 
-const newColor = document.querySelector('.js-decrement');
+const inputEl = document.querySelector('.js-input');
+
+const newColor = document.querySelector('.bg-line');
 console.log(newColor);
-newColor.style.backgroundColor = 'orange';
+newColor.style.backgroundColor = 'yellow';
 
 const article = document.querySelector('.article');
 console.log(article.innerHTML);
-
 const title = document.querySelector('.article .title');
 console.log(title.innerHTML);
-
 const text = document.querySelector('.article .text');
 console.log(text.innerHTML);
-
 const link = document.querySelector('.article .link');
 console.log(link.innerHTML);
-
 article.innerHTML = '';
 
 const technologies = ['HTML', 'CSS', 'JavaScript', 'React', 'Node'];
@@ -1193,3 +1191,46 @@ const markup = technologies.map(technology => `<li class="list-item">${technolog
 console.log(markup);
 list.innerHTML = markup;
 list.innerHTML = '';
+
+const countriesEl = document.querySelector('.site');
+countriesEl.style.color = 'gray';
+
+const somes = countriesEl.querySelectorAll('.site__item');
+console.log(somes);
+const some = document.querySelectorAll('.site__item');
+console.log(some);
+
+const recolorBtnEl = document.querySelector('.recolor');
+recolorBtnEl.addEventListener('click', () => {
+  countriesEl.style.color = 'darkgreen';
+  inputEl.value = 'werwerw' + ' + ' + Math.random() * (10 - 1) + 1;
+  somes.forEach(element => {
+    element.textContent = element.textContent + ' + ';
+  });
+});
+
+const imgEl = document.querySelector('.img');
+console.log(imgEl.getAttribute('src'));
+console.log(imgEl.alt);
+
+const actions = document.querySelectorAll('.js-actions button');
+actions.forEach(element => {
+  console.log(element.dataset.action);
+});
+
+const titleEl = document.createElement('h2');
+titleEl.classList.add('subtitle');
+titleEl.textContent = 'Some SUBTITLE';
+
+countriesEl.prepend(titleEl);
+
+const coutryItemEl = document.createElement('li');
+coutryItemEl.classList.add('country-entry');
+
+const countryLinkEl = document.createElement('a');
+countryLinkEl.href = './index.html';
+countryLinkEl.textContent = 'Portugal';
+countryLinkEl.classList.add('country-link');
+
+coutryItemEl.appendChild(countryLinkEl);
+countriesEl.appendChild(coutryItemEl);

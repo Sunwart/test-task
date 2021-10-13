@@ -5,7 +5,8 @@
   transform: translate(-50%, 0);
   z-index: -1;
   background-color: var(--color-text);
-  background-image: url('../images/bg.jpg');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(230, 200, 50, 1)),
+    url('../images/bg.jpg');
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: contain;
@@ -17,4 +18,11 @@
     background-size: cover;
     height: 770px;
   }
+}
+
+.bg-line {
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  top: 55px;
 }

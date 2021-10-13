@@ -106,6 +106,7 @@
       </div>
     </header>
     <main class="background-image">
+      <div class="bg-line"></div>
       <article class="article">
         <h2 class="title">Article title</h2>
         <p class="text">
@@ -118,13 +119,29 @@
       <section>
         <ul class="list"></ul>
       </section>
-    </main>
 
-    <section class="section-bg">
-      <button class="btn js-decrement">Decrease</button>
-      <p class="js-value counter">0</p>
-      <button class="btn js-increment">Increase</button>
-    </section>
+      <ul class="site">
+        <li class="site__item">Mexico</li>
+        <li class="site__item">Nepal</li>
+        <li class="site__item">Bolivia</li>
+        <li class="site__item">Peru</li>
+        <li class="site__item">Morocco</li>
+      </ul>
+      <button type="button" class="btn recolor">Recolor</button>
+      <img src="./images/bg.jpg" alt="main bg image" width="200px" class="img" />
+
+      <section class="section-bg">
+        <button class="btn js-decrement">Decrease</button>
+        <p class="js-value counter">0</p>
+        <button class="btn js-increment">Increase</button>
+      </section>
+      <div class="actions js-actions">
+        <input type="tex" class="form-input js-input" />
+        <button type="buttont" data-action="add" class="btn">ADD</button>
+        <button type="buttont" data-action="remove" class="btn">REMOVE</button>
+        <button type="buttont" data-action="edit" class="btn">EDIT</button>
+      </div>
+    </main>
     <script src="./js/modal.js"></script>
     <script src="./js/test.js" type="module"></script>
     <script src="./js/counter.js" type="module"></script>
