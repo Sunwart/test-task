@@ -1213,11 +1213,6 @@ const imgEl = document.querySelector('.img');
 console.log(imgEl.getAttribute('src'));
 console.log(imgEl.alt);
 
-const actions = document.querySelectorAll('.js-actions button');
-actions.forEach(element => {
-  console.log(element.dataset.action);
-});
-
 const titleEl = document.createElement('h2');
 titleEl.classList.add('subtitle');
 titleEl.textContent = 'Some SUBTITLE';
@@ -1234,3 +1229,130 @@ countryLinkEl.classList.add('country-link');
 
 coutryItemEl.appendChild(countryLinkEl);
 countriesEl.appendChild(coutryItemEl);
+
+const actions = document.querySelectorAll('.js-actions button');
+actions.forEach(element => {
+  console.log(element.dataset.action);
+});
+
+// const buttonAdd = document.querySelector('.add-btn');
+
+// const handleClick = () => {
+//   console.log('Button was clicked');
+// };
+
+// buttonAdd.addEventListener('click', handleClick);
+
+// buttonAdd.addEventListener('click', () => {
+//   console.log('Button ADD was clicked');
+// });
+
+// const buttonRemove = document.querySelector('.remove-btn');
+
+// buttonRemove.addEventListener('click', () => {
+//   console.log('Button REMOVE was clicked');
+// });
+
+// const buttonEdit = document.querySelector('.edit-btn');
+
+// buttonEdit.addEventListener('click', () => {
+//   console.log('Button EDIT was clicked');
+// });
+
+const addListenerBtn = document.querySelector('[data-action="add"]');
+const removeListenerBtn = document.querySelector('[data-action="remove"]');
+const btnEdIt = document.querySelector('#btn');
+
+const handleClick = () => {
+  console.log('click event listener callback');
+};
+
+addListenerBtn.addEventListener('click', () => {
+  btn.addEventListener('click', handleClick);
+  console.log('click event listener was added to btn');
+});
+
+removeListenerBtn.addEventListener('click', () => {
+  btn.removeEventListener('click', handleClick);
+  console.log('click event listener was removed from btn');
+});
+
+const handleClickEvent = event => {
+  console.log(event);
+  console.log('event type: ', event.type);
+  console.log('currentTarget: ', event.currentTarget);
+};
+
+btnEdIt.addEventListener('click', handleClickEvent);
+
+document.addEventListener('keydown', event => {
+  console.log('Keydown: ', event);
+});
+
+document.addEventListener('keyup', event => {
+  console.log('Keyup: ', event);
+});
+
+document.addEventListener('keydown', event => {
+  console.log('key: ', event.key);
+  console.log('code: ', event.code);
+});
+
+// const clearLogBtn = document.querySelector('[data-action="clear"]');
+// const logList = document.querySelector('.log-list');
+// let keypressCounter = 1;
+
+// document.addEventListener('keydown', logMessage);
+// document.addEventListener('keyup', logMessage);
+// clearLogBtn.addEventListener('click', reset);
+
+// function logMessage({ type, key, code }) {
+//   const markup = `<div class="log-item">
+//     <span class="chip">${keypressCounter}</span>
+//     <ul>
+//       <li><b>Event</b>: ${type}</li>
+//       <li><b>Key</b>: ${key}</li>
+//       <li><b>Code</b>: ${code}</li>
+//     </ul>
+//   </div>`;
+
+//   logList.insertAdjacentHTML('afterbegin', markup);
+
+//   if (type === 'keyup') {
+//     incrementKeypressCounter();
+//   }
+// }
+
+// function reset() {
+//   keypressCounter = 1;
+//   logList.innerHTML = '';
+// }
+
+// function incrementKeypressCounter() {
+//   keypressCounter += 1;
+// }
+
+document.addEventListener('keydown', event => {
+  event.preventDefault();
+
+  if ((event.ctrlKey || event.metaKey) && event.code === 'KeyS') {
+    console.log('«Ctrl + s» or «Command + s» combo');
+  }
+});
+
+const select = document.querySelector('.pizza-select');
+const textOutput = document.querySelector('.text-output');
+const valueOutput = document.querySelector('.value-output');
+
+setOutput();
+
+select.addEventListener('change', setOutput);
+
+function setOutput() {
+  const selectedOptionValue = select.value;
+  const selectedOptionIndex = select.selectedIndex;
+  const selectedOptionText = select.options[selectedOptionIndex].text;
+
+  textOutput.textContent = selectedOptionText;
+  valueOutput.textContent = selectedOptionValue;
+}

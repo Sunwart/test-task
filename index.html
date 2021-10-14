@@ -128,7 +128,11 @@
         <li class="site__item">Morocco</li>
       </ul>
       <button type="button" class="btn recolor">Recolor</button>
+
       <img src="./images/bg.jpg" alt="main bg image" width="200px" class="img" />
+      <!-- 
+      <button type="button" data-action="clear">Clear output</button>
+      <div class="log-list"></div> -->
 
       <section class="section-bg">
         <button class="btn js-decrement">Decrease</button>
@@ -137,11 +141,26 @@
       </section>
       <div class="actions js-actions">
         <input type="tex" class="form-input js-input" />
-        <button type="buttont" data-action="add" class="btn">ADD</button>
-        <button type="buttont" data-action="remove" class="btn">REMOVE</button>
-        <button type="buttont" data-action="edit" class="btn">EDIT</button>
+        <button type="buttont" data-action="add" class="btn add-btn">ADD</button>
+        <button type="buttont" data-action="remove" class="btn remove-btn">REMOVE</button>
+        <button type="buttont" data-action="edit" class="btn edit-btn" id="btn">EDIT</button>
       </div>
+
+      <p>Selected option text: <span class="text-output">none</span></p>
+
+      <p></p>
+      <p>Selected option value: <span class="value-output">none</span></p>
+
+      <p>
+        <select class="pizza-select">
+          <option value="four_meats">Four Meats</option>
+          <option value="royal_cheese">Royal Cheese</option>
+          <option value="vegetarian">Vegetarian</option>
+          <option value="smoked_salmon">Smoked Salmon</option>
+        </select>
+      </p>
     </main>
+
     <script src="./js/modal.js"></script>
     <script src="./js/test.js" type="module"></script>
     <script src="./js/counter.js" type="module"></script>
